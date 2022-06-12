@@ -11,13 +11,50 @@
             color: aliceblue;
             text-align: center;
         }
+        #label{
+            color:aliceblue;
+        }
+        #form{
+            text-align: center;
+        }
+        #fname{
+            max-width: 100%;
+        }
+        fieldset{
+            border: none;
+            padding: 2rem 0;
+            
+        }
+        input{
+            background-color:darkslategray;
+            color:aliceblue;
+            
+            border: none;
+        }
     </style>
 </head>
 <header>
     <h1>Registration form</h1>
     <p>Please fill out this form with the required information</p>
 </header>
+
 <body>
+    <div>
+        <form id="form">
+            <fieldset class="fieldset">
+                <label id="label">Enter your first name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label id="label">Enter Your last name: </label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label id="label">Enter your email:</label><br>
+                <input type="text" id="email" name="email" required><br>
+                <label id="label">Create new password</label><br>
+                <input type="password" id="password" name="password" pattern="[a-z0-5]{8,}" required>
+            </fieldset>
+    
+        </form>
+        
+    </div>
     
     
 </body>
