@@ -1,51 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Registor yourself</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-            background-color:darkslateblue;
-            font-family: tahoma, sans-serif;
-        }
-        h1, p{
-            color: aliceblue;
-            text-align: center;
-        }
-        #label{
-            display:inline-block;
-            color:aliceblue;
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
-        .personal_detail input{
-            background-color:darkslategray;
-            color:aliceblue;
-            border: none;
-            width: 500px;
-            padding: 5px 0 5px 0;
-            outline: none;
-        }
-        #form{
-            margin: auto;
-            width: 500px;
-        }
-        #below{
-            height: 2px;
-            margin-top: 50px;
-            max-width: 500px;
-            background-color: rgb(114, 134, 134);
-            border: none;
-        }
-        fieldset{
-            border: none;
-        }
-        input[type='file']{
-            display: inline-block;
-            background-color: darkslategray;
-            width:500px
-        }
-    </style>
+    <title>Registor yourself</title>
+    <link rel="stylesheet" href="mystyle.css">
+    
 </head>
 <header>
     <h1>Registration form</h1>
@@ -53,29 +14,49 @@
 </header>
 
 <body>
-        <form id="form">
-            <fieldset class="personal_detail">
-                <label id="label">Enter your first name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label id="label">Enter Your last name: </label><br>
-                <input type="text" id="lname" name="lname"><br>
-                <label id="label">Enter your email:</label><br>
-                <input type="text" id="email" name="email" required><br>
-                <label id="label">Create new password</label><br>
-                <input type="password" id="password" name="password" pattern="[a-z0-5]{8,}" required>
-            </fieldset>
-                <hr id="below">
-            <fieldset class="account_preference">
-                <label id="label"><input type="radio" id="personal_account" name="account_type" value="pesonal account"/>personal_account</label><br>
-                <label id="label"><input type="radio" id="Business" name="account_type" value="business"/>Business account</label><br>
-                <label id="label"><input type="checkbox" id="terms_condition" name="terms-condition"/>I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and condition</a></label> 
-            </fieldset>
-                <hr>
-                <input type="file" id="file" name="upload_file">
-            
-        </form>
-        
+<form id="form">
+    <div class="personal_detail">
+        <label id="label">Enter your first name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label id="label">Enter Your last name: </label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label id="label">Enter your email:</label><br>
+        <input type="text" id="email" name="email" required><br>
+        <label id="label">Create new password</label><br>
+        <input type="password" id="password" name="password" pattern="[a-z0-5]{8,}" required>
     </div>
+        <hr id="below">
+    <div>
+        <label id="label"><input type="radio" id="personal_account" name="account_type" value="pesonal account"/>personal_account</label><br>
+        <label id="label"><input type="radio" id="Business" name="account_type" value="business"/>Business account</label><br>
+        <label id="label"><input type="checkbox" id="terms_condition" name="terms-condition"/>I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and condition</a></label> 
+        <hr>
+    </div>
+    <div>
+        <input type="file" id="file" name="upload_file">
+        <label id="label">Input Your age(Years): </label><br>
+        <input type="text" id="age" name="age"> 
+    </div>
+</form>
+<div class="referrer">
+    <label id="label"> How did you hear about us?<br>
+        <select class="select" name="referrer">
+        <option value="">(Select one)</option>
+        <option value="1">Freecodecamp news</option>
+        <option value="2">Freecodecamp youtube channel</option>
+        <option value="3">Freecodecamp Forum</option>
+        <option value="4">other</option>
+        </select>
+    </label>
+    <label id="label">Provide a bio: </label><br>
+    <textarea name="bio" id="bio" rows="3" col="30" placeholder="I love to code at night..."></textarea>
+    
+    
+</div>
+<div id="submitdiv">
+    <input type="submit" id="submit" value="Submit">
+</div>
+        
     
     
 </body>
