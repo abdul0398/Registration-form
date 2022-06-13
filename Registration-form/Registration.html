@@ -6,30 +6,44 @@
     <style>
         body{
             background-color:darkslateblue;
+            font-family: tahoma, sans-serif;
         }
         h1, p{
             color: aliceblue;
             text-align: center;
         }
         #label{
+            display:inline-block;
             color:aliceblue;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .personal_detail input{
+            background-color:darkslategray;
+            color:aliceblue;
+            border: none;
+            width: 500px;
+            padding: 5px 0 5px 0;
+            outline: none;
         }
         #form{
-            text-align: center;
+            margin: auto;
+            width: 500px;
         }
-        #fname{
-            max-width: 100%;
+        #below{
+            height: 2px;
+            margin-top: 50px;
+            max-width: 500px;
+            background-color: rgb(114, 134, 134);
+            border: none;
         }
         fieldset{
             border: none;
-            padding: 2rem 0;
-            
         }
-        input{
-            background-color:darkslategray;
-            color:aliceblue;
-            
-            border: none;
+        input[type='file']{
+            display: inline-block;
+            background-color: darkslategray;
+            width:500px
         }
     </style>
 </head>
@@ -39,9 +53,8 @@
 </header>
 
 <body>
-    <div>
         <form id="form">
-            <fieldset class="fieldset">
+            <fieldset class="personal_detail">
                 <label id="label">Enter your first name:</label><br>
                 <input type="text" id="fname" name="fname"><br>
                 <label id="label">Enter Your last name: </label><br>
@@ -51,7 +64,15 @@
                 <label id="label">Create new password</label><br>
                 <input type="password" id="password" name="password" pattern="[a-z0-5]{8,}" required>
             </fieldset>
-    
+                <hr id="below">
+            <fieldset class="account_preference">
+                <label id="label"><input type="radio" id="personal_account" name="account_type" value="pesonal account"/>personal_account</label><br>
+                <label id="label"><input type="radio" id="Business" name="account_type" value="business"/>Business account</label><br>
+                <label id="label"><input type="checkbox" id="terms_condition" name="terms-condition"/>I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and condition</a></label> 
+            </fieldset>
+                <hr>
+                <input type="file" id="file" name="upload_file">
+            
         </form>
         
     </div>
